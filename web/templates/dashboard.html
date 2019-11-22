@@ -1,0 +1,19 @@
+<html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <title>final</title>
+</head>
+<link rel="stylesheet" href="{% static "css/dashboard.css" %}">
+<body>
+<h1>Dashboard</h1>
+<div id='dashboard'></div>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="{% static "js/dashboard.js" %}"></script>
+<script>
+    var Data= {{ data | safe}}
+    dashboard('#dashboard', Data)
+</script>
+</body>
+</html>

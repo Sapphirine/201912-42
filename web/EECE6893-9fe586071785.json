@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "leafy-oxide-252603",
+  "private_key_id": "9fe5860717857fd8acc00a4713bc333457ca24a0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCTVYLQV3cWJ1Yz\nQw0VoB29qh64zcfmE+9lyhYfLkLDEO74PdeI5adx3mip7pw+8J0aF8ddwglLiHGD\nVeS0uLDT84aUgCWnZMCQ5W/daBCb7+h33sEwa0NIbpLuGGtWD6whenieUgpQmbwu\no2six2FZIldc69fh2uhouEtmuLfxve5t5IzJkzLekpcLhZTQXMUVF3vduT+oqPaA\nG60t7gQsdx56QeKRkcftWap1HiCuV27NejQgnlAZRlbt8wNnweiIWBnvH5locMPz\nkNa6C+onYndM1sUiD2lBYImOw6JmNg+wn00T4Kt9zSSXPbUErk3kYUvbrjsJac8n\nwYSJyy2/AgMBAAECggEAFFnY7mdOe0Bmv0DxQz3xLbwcb0F5bbXuOPyvjpIIxcIG\niEKejXnPZcKnaWWcrnL0+GA1eSVuvEC2EUKhizcBsd0vBz8mNFeN49XVXFteA/Qh\nA8HApKwESLKBWCMGXIZgq+UrWQ8S/qwlmrmW+GBa+YFtWNf442kl9iUSwTcdrWXt\nqxdw69jBP5hCiJZuCZFqeqDUqXtvaBNTUyWirT2W/rOjqE4JNAC+ASi6RBgJAVRl\n0xhR5KasWAo5ZjKkzv+Nbzvp9kqCRvP1HHYKPoB1wew2w0eEn//Dokj/jqbknmS+\n2DN/tbhzB1V9x91bmpqdHAh9wlqYUN8UAt6LPUZE1QKBgQDFNRO2wfy6Gm6Qza8/\nFMrN/bM0JmhOdmlF/ASAkUVKk5fN2z4+YyGP0MrDHN62T/nMOSh0Jt829sbAuidu\nkJ1iB96q50X/6ZnHWopOvDJ81E7jp3Ammw1q1RsPlcUs9o7wQojoQTHSuzPKq3pR\n5BmxZxI0XWpAz78yRUUXL6rvowKBgQC/QhadhOOhLorCllMkkaIODZWI59OubZnR\nrKiXo59X+3cGMO5N4q3eRTtPyS/8enbT5iRVWT6Rbf0Qg2aYXw7LZY57dCWnw3er\nPXAp1Xl+503eoRvLYM4q/XC8AD/DNfPPW7IzwHsLudTyb67fECwZMqX1Q+o6SxqP\ne1IpD+87NQKBgQCSB1CWxySuZj4zSauYKXxXdqKJXltkpngj04896NSHea0ySUPZ\nDKzggrpyKmGcXLJbkIOtJs+pMqlQM0hZrgpseelfYixKaR9vKFM8JE26c7gLCYSZ\ngb04u57zNnMwbU7BCHO6j/Ql2GtsivfjxeVkoS8wyW+RmIQ65GJZ3flUwwKBgBGs\nYbqclQxH6LqieXxfmMIDr1W/Vmg/6H7fnZSlogvXSOBhlSPNVpO7ggeVZ8HE70YV\ndjYM0SNPLptgCRL7dbqF3+y4huJBxcUlIEA9YcTASwnPiWn5wBNo6An3W+0GB0ma\nB5WQq84hlfPxLg+exvRtIbjQVcydNA8eLjFtL4YhAoGAM1xyMYxmHbfJCTilBX8x\ncmeOsdVFm5X6gl1DBTRnefn2pt39QfpLMJNx+Sf3aBe5Zv7vJgvNvt0q+AeUGL9x\nh4L8VYGlhuqeL12+y+00sHBSTwT3cndt888EumFKwOvcNGDPi8K7j010bkcglOw3\nA838AmgD2OLQ21bHkifVemw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "eecs6893@leafy-oxide-252603.iam.gserviceaccount.com",
+  "client_id": "111396026867895831210",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/eecs6893%40leafy-oxide-252603.iam.gserviceaccount.com"
+}
