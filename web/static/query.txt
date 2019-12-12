@@ -1,0 +1,5 @@
+taxi :
+SELECT pickup_location_id,dropoff_location_id,pickup_datetime,DATETIME_DIFF(dropoff_datetime,pickup_datetime,MINUTE) as duration, fare_amount + mta_tax + tip_amount + tolls_amount as base_charge,mta_tax+imp_surcharge as surcharge FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2018` where pickup_location_id is not null and dropoff_location_id is not null limit 10)
+
+join on left:
+SELECT trip. tripduration, trip.starttime,trip.end_station_id, zone.zone_id,zone.zone_name  from citibike.citi_trip_2018 as trip JOIN final.station_zone as zone on trip.start_station_id = zone.station_id limit 10
