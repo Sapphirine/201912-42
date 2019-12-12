@@ -134,10 +134,25 @@ $(function() {
         update: "hover_area ? 'Weekdays ' + time_of_day : ''"
       },
       {
-        name: "tooltip_citi_median",
+        name: "tooltip_bike_time",
         value: null,
         //update: "hover_area ? 'Citi Bike median: ' + timeFormat(1000 * hover_area.citi_median, '%-M:%S') : ''"
-        update: "hover_area ? 'Citi Bike median: ' + hover_area.citi_median : ''"
+        update: "hover_area ? 'Bike travel time: ' + hover_area.bike_travel_time : ''"
+      },
+      {
+        name: "tooltip_car_time",
+        value: null,
+        update: "hover_area ? 'Vehicle travel time: ' + hover_area.taxi_travel_time : ''"
+      },
+      {
+        name: "tooltip_base_charge",
+        value: null,
+        update: "hover_area ? 'Vehicle base charge: ' + hover_area.base_charge : ''"
+      },
+      {
+        name: "tooltip_surcharge",
+        value: null,
+        update: "hover_area ? 'Vehicle surcharge: ' + hover_area.surcharge : ''"
       },
       {
         name: "tooltip_x",
@@ -155,7 +170,8 @@ $(function() {
         name: "simulation_results",
         //url: "https://cdn.toddwschneider.com/taxi_vs_citibike/simulation_results.csv",
         //url: "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/simulation_results.csv",
-        url: "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/final_result_citi_trip_stats.csv",
+        url:
+          "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/final_result_car_bike_comparison_formatted.csv",
         format: {type: "csv", parse: "auto"},
         transform: [
           {
@@ -166,12 +182,14 @@ $(function() {
       },
       {
         name: "east_river_bridges",
-        url: "https://cdn.toddwschneider.com/taxi_vs_citibike/east_river_bridges.json",
+        //url: "https://cdn.toddwschneider.com/taxi_vs_citibike/east_river_bridges.json",
+        url: "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/east_river_bridges.json",
         format: {type: "topojson", feature: "bridges"}
       },
       {
         name: "taxi_zones",
-        url: "https://cdn.toddwschneider.com/taxi_vs_citibike/taxi_zones_bmq.json",
+        //url: "https://cdn.toddwschneider.com/taxi_vs_citibike/taxi_zones_bmq.json",
+        url: "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/taxi_zones_bmq.json",
         format: {type: "topojson", feature: "trimmed_taxi_zones_geojson"},
         transform: [
           {
@@ -179,8 +197,8 @@ $(function() {
             from: "simulation_results",
             key: "end_zone_id",
             fields: ["properties.locationid"],
-            values: [ "duration"],
-            as: [ "citi_median"]
+            values: [ "bike_travel_time","taxi_travel_time","base_charge","surcharge"],
+            as: [ "bike_travel_time", "taxi_travel_time","base_charge","surcharge"]
           }
         ]
       },
@@ -255,7 +273,7 @@ $(function() {
           update: {
             fill: {
               scale: "color",
-              field: "citi_median" 
+              field: "bike_travel_time" 
             },
             fillOpacity: {value: 1},
             stroke: {value: "#777"},
@@ -296,7 +314,7 @@ $(function() {
         encode: {
           update: {
             width: {value: 243},
-            height: {value: 127},
+            height: {value: 137},
             fill: {value: "#fff"},
             fillOpacity: {value: 0.9},
             stroke: {value: "#777"},
@@ -355,10 +373,52 @@ $(function() {
         encode: {
           update: {
             x: {signal: "tooltip_x"},
-            y: {signal: "tooltip_y + 82"},
+            y: {signal: "tooltip_y + 64"},
             fontSize: {value: 14},
             text: {
-              signal: "tooltip_citi_median"
+              signal: "tooltip_bike_time"
+            }
+          }
+        }
+      },
+      {
+        type: "text",
+        interactive: false,
+        encode: {
+          update: {
+            x: {signal: "tooltip_x"},
+            y: {signal: "tooltip_y + 80"},
+            fontSize: {value: 14},
+            text: {
+              signal: "tooltip_car_time"
+            }
+          }
+        }
+      },
+      {
+        type: "text",
+        interactive: false,
+        encode: {
+          update: {
+            x: {signal: "tooltip_x"},
+            y: {signal: "tooltip_y + 96"},
+            fontSize: {value: 14},
+            text: {
+              signal: "tooltip_base_charge"
+            }
+          }
+        }
+      },
+      {
+        type: "text",
+        interactive: false,
+        encode: {
+          update: {
+            x: {signal: "tooltip_x"},
+            y: {signal: "tooltip_y + 112"},
+            fontSize: {value: 14},
+            text: {
+              signal: "tooltip_surcharge"
             }
           }
         }
