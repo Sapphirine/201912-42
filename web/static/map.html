@@ -136,7 +136,8 @@ $(function() {
       {
         name: "tooltip_citi_median",
         value: null,
-        update: "hover_area ? 'Citi Bike median: ' + timeFormat(1000 * hover_area.citi_median, '%-M:%S') : ''"
+        //update: "hover_area ? 'Citi Bike median: ' + timeFormat(1000 * hover_area.citi_median, '%-M:%S') : ''"
+        update: "hover_area ? 'Citi Bike median: ' + hover_area.citi_median : ''"
       },
       {
         name: "tooltip_x",
@@ -152,12 +153,14 @@ $(function() {
     data: [
       {
         name: "simulation_results",
-        url: "https://cdn.toddwschneider.com/taxi_vs_citibike/simulation_results.csv",
+        //url: "https://cdn.toddwschneider.com/taxi_vs_citibike/simulation_results.csv",
+        //url: "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/simulation_results.csv",
+        url: "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/final_result_citi_trip_stats.csv",
         format: {type: "csv", parse: "auto"},
         transform: [
           {
             type: "filter",
-            expr: "datum.time_bucket == time_of_day && datum.start_zone == selected_location"
+            expr: "datum.time_bucket == time_of_day && datum.start_zone_name == selected_location"
           }
         ]
       },
@@ -174,9 +177,9 @@ $(function() {
           {
             type: "lookup",
             from: "simulation_results",
-            key: "end_taxi_zone_id",
+            key: "end_zone_id",
             fields: ["properties.locationid"],
-            values: [ "citi_median"],
+            values: [ "duration"],
             as: [ "citi_median"]
           }
         ]
