@@ -4,7 +4,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <div id="nyc-taxi-vs-citi-select-container" style="">
         <div>
-            <h2 class="input-header"> Weekday time window </h2>
+            <h3 class="input-header"> Time window </h3>
             <div class="radio-container">
                 <input id="nyc-taxi-vs-citi-time-1" type="radio" name="nyc-taxi-vs-citi-time" value="8:00 AM–11:00 AM" checked="">
                 <label for="nyc-taxi-vs-citi-time-1">8:00 AM–11:00 AM</label>
@@ -31,8 +31,6 @@
             </div>
         </div>
     </div>
-
-    <h2 class="taxi-vs-citi-map-title">From Flatiron, weekdays 8:00 AM–11:00 AM</h2>
 
     <div class="nyc-taxi-zones-map-wrapper">
         <div id="nyc-taxi-zones-map" style="display: block;margin: auto;"><canvas width="900" height="1280" class="marks" style="width: 450px; height: 640px;"></canvas><div class="vega-bindings"><div class="vega-bind"><span class="vega-bind-name">selected_location</span><select name="selected_location"><option value="Alphabet City">Alphabet City</option><option value="Battery Park">Battery Park</option><option value="Battery Park City">Battery Park City</option><option value="Bedford">Bedford</option><option value="Bloomingdale">Bloomingdale</option><option value="Boerum Hill">Boerum Hill</option><option value="Brooklyn Heights">Brooklyn Heights</option><option value="Brooklyn Navy Yard">Brooklyn Navy Yard</option><option value="Bushwick South">Bushwick South</option><option value="Carroll Gardens">Carroll Gardens</option><option value="Central Park">Central Park</option><option value="Chinatown">Chinatown</option><option value="Clinton East">Clinton East</option><option value="Clinton Hill">Clinton Hill</option><option value="Clinton West">Clinton West</option><option value="Cobble Hill">Cobble Hill</option><option value="Columbia Street">Columbia Street</option><option value="Crown Heights North">Crown Heights North</option><option value="Downtown Brooklyn/MetroTech">Downtown Brooklyn/MetroTech</option><option value="DUMBO/Vinegar Hill">DUMBO/Vinegar Hill</option><option value="East Chelsea">East Chelsea</option><option value="East Harlem South">East Harlem South</option><option value="East Village">East Village</option><option value="East Williamsburg">East Williamsburg</option><option value="Financial District North">Financial District North</option><option value="Financial District South">Financial District South</option><option value="Flatiron">Flatiron</option><option value="Fort Greene">Fort Greene</option><option value="Garment District">Garment District</option><option value="Gowanus">Gowanus</option><option value="Gramercy">Gramercy</option><option value="Greenpoint">Greenpoint</option><option value="Greenwich Village North">Greenwich Village North</option><option value="Greenwich Village South">Greenwich Village South</option><option value="Hudson Sq">Hudson Sq</option><option value="Kips Bay">Kips Bay</option><option value="Lenox Hill East">Lenox Hill East</option><option value="Lenox Hill West">Lenox Hill West</option><option value="Lincoln Square East">Lincoln Square East</option><option value="Lincoln Square West">Lincoln Square West</option><option value="Little Italy/NoLiTa">Little Italy/NoLiTa</option><option value="Long Island City/Hunters Point">Long Island City/Hunters Point</option><option value="Long Island City/Queens Plaza">Long Island City/Queens Plaza</option><option value="Lower East Side">Lower East Side</option><option value="Manhattan Valley">Manhattan Valley</option><option value="Meatpacking/West Village West">Meatpacking/West Village West</option><option value="Midtown Center">Midtown Center</option><option value="Midtown East" selected="true">Midtown East</option><option value="Midtown North">Midtown North</option><option value="Midtown South">Midtown South</option><option value="Murray Hill">Murray Hill</option><option value="Park Slope">Park Slope</option><option value="Penn Station/Madison Sq West">Penn Station/Madison Sq West</option><option value="Prospect Heights">Prospect Heights</option><option value="Prospect Park">Prospect Park</option><option value="Queensbridge/Ravenswood">Queensbridge/Ravenswood</option><option value="Red Hook">Red Hook</option><option value="Seaport">Seaport</option><option value="SoHo">SoHo</option><option value="South Williamsburg">South Williamsburg</option><option value="Stuy Town/Peter Cooper Village">Stuy Town/Peter Cooper Village</option><option value="Stuyvesant Heights">Stuyvesant Heights</option><option value="Sunnyside">Sunnyside</option><option value="Sunset Park West">Sunset Park West</option><option value="Sutton Place/Turtle Bay North">Sutton Place/Turtle Bay North</option><option value="Times Sq/Theatre District">Times Sq/Theatre District</option><option value="TriBeCa/Civic Center">TriBeCa/Civic Center</option><option value="Two Bridges/Seward Park">Two Bridges/Seward Park</option><option value="UN/Turtle Bay South">UN/Turtle Bay South</option><option value="Union Sq">Union Sq</option><option value="Upper East Side North">Upper East Side North</option><option value="Upper East Side South">Upper East Side South</option><option value="Upper West Side North">Upper West Side North</option><option value="Upper West Side South">Upper West Side South</option><option value="West Chelsea/Hudson Yards">West Chelsea/Hudson Yards</option><option value="West Village">West Village</option><option value="Williamsburg (North Side)">Williamsburg (North Side)</option><option value="Williamsburg (South Side)">Williamsburg (South Side)</option><option value="World Trade Center">World Trade Center</option><option value="Yorkville East">Yorkville East</option><option value="Yorkville West">Yorkville West</option></select></div><div class="vega-bind"><span class="vega-bind-name">time_of_day</span><span class="vega-bind-radio"><input id="vega-option-time_of_day-8:00 AM–11:00 AM" type="radio" name="time_of_day" value="8:00 AM–11:00 AM" checked="true"><label for="vega-option-time_of_day-8:00 AM–11:00 AM">8:00 AM–11:00 AM</label><input id="vega-option-time_of_day-11:00 AM–4:00 PM" type="radio" name="time_of_day" value="11:00 AM–4:00 PM"><label for="vega-option-time_of_day-11:00 AM–4:00 PM">11:00 AM–4:00 PM</label><input id="vega-option-time_of_day-4:00 PM–7:00 PM" type="radio" name="time_of_day" value="4:00 PM–7:00 PM"><label for="vega-option-time_of_day-4:00 PM–7:00 PM">4:00 PM–7:00 PM</label><input id="vega-option-time_of_day-7:00 PM–10:00 PM" type="radio" name="time_of_day" value="7:00 PM–10:00 PM"><label for="vega-option-time_of_day-7:00 PM–10:00 PM">7:00 PM–10:00 PM</label><input id="vega-option-time_of_day-10:00 PM–8:00 AM" type="radio" name="time_of_day" value="10:00 PM–8:00 AM"><label for="vega-option-time_of_day-10:00 PM–8:00 AM">10:00 PM–8:00 AM</label></span></div></div></div>
@@ -167,11 +165,8 @@ $(function() {
     ],
     data: [
       {
-        name: "simulation_results",
-        //url: "https://cdn.toddwschneider.com/taxi_vs_citibike/simulation_results.csv",
-        //url: "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/simulation_results.csv",
-        url:
-          "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/final_result_car_bike_comparison_formatted.csv",
+        name: "comparison_results",
+        url: "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/final_result_car_bike_comparison_formatted.csv",
         format: {type: "csv", parse: "auto"},
         transform: [
           {
@@ -182,19 +177,17 @@ $(function() {
       },
       {
         name: "east_river_bridges",
-        //url: "https://cdn.toddwschneider.com/taxi_vs_citibike/east_river_bridges.json",
         url: "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/east_river_bridges.json",
         format: {type: "topojson", feature: "bridges"}
       },
       {
         name: "taxi_zones",
-        //url: "https://cdn.toddwschneider.com/taxi_vs_citibike/taxi_zones_bmq.json",
         url: "https://raw.githubusercontent.com/hs3194/eecs6893_final/master/web/static/taxi_zones_bmq.json",
         format: {type: "topojson", feature: "trimmed_taxi_zones_geojson"},
         transform: [
           {
             type: "lookup",
-            from: "simulation_results",
+            from: "comparison_results",
             key: "end_zone_id",
             fields: ["properties.locationid"],
             values: [ "bike_travel_time","taxi_travel_time","base_charge","surcharge"],
@@ -466,13 +459,6 @@ $(function() {
     view.signal("selected_location", "Williamsburg (North Side)").run();
     set_title();
   });
-
-  var $title = $(".taxi-vs-citi-map-title");
-
-  var set_title = function() {
-    var new_title = "From " + $("#nyc-taxi-vs-citi-select").val() + ", weekdays " + $("input[name='nyc-taxi-vs-citi-time']:checked").val();
-    $title.html(new_title);
-  };
 
   $("#nyc-taxi-zones-map").on("click", function() {
     vega_val = $("select[name='selected_location']").val();
