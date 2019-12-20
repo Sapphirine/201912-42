@@ -10,7 +10,7 @@ from collections import defaultdict
 # https://cloud.google.com/bigquery/docs/reference/libraries#client-libraries-install-nodejs
 # To get your credential
 
-credentials = service_account.Credentials.from_service_account_file('/c/Users/ShiHongzhi/Dropbox/Columbia/EECS6893/eecs6893_final/web/EECE6893-9fe586071785.json')
+credentials = service_account.Credentials.from_service_account_file('/c/Users/ShiHongzhi/Dropbox/Columbia/EECS6893/eecs6893_final/web/EECE6893-c202218b2ba7.json')
 
 
 def hello(request):
